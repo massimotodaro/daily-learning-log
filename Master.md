@@ -20,6 +20,47 @@ useful to my future self, even when the day's lesson is small.
 10. A day with a failed experiment still counts when the failure and lesson are recorded
     accurately.
 
+## Repository structure
+
+```text
+daily-learning-log/
+├── Master.md
+├── Index.md
+├── templates/
+│   └── Daily.md
+└── entries/
+    └── YYYY/
+        └── YYYY-MM-DD.md
+```
+
+- `Master.md` owns the rules, areas, identifiers, and formats.
+- `Index.md` is the navigation surface and contains one row per lesson.
+- `templates/Daily.md` is the reusable entry template.
+- `entries/YYYY/YYYY-MM-DD.md` contains all lessons recorded for one calendar day.
+
+## Lesson identifiers and indexing
+
+Every distinct lesson receives a permanent identifier in this form:
+
+```text
+DL-YYYY-MM-DD-NN
+```
+
+`NN` starts at `01` each day and increases in the order the lessons appear. Do not reuse
+or renumber an identifier after publication. Corrections should link to the original
+lesson and explain what changed.
+
+Every lesson must have its own row in `Index.md`, including:
+
+- its permanent identifier;
+- date;
+- descriptive title linked to its stable anchor;
+- learning areas; and
+- concise lowercase tags.
+
+When adding or correcting an entry, update `Index.md` in the same commit. Topic-specific
+indexes should be introduced only when the main index becomes difficult to navigate.
+
 ## Learning areas
 
 Use one or more of these labels in each daily entry.
@@ -80,45 +121,23 @@ Use one or more of these labels in each daily entry.
 - Repeatable processes, checklists, and templates
 - Workflow improvements and lessons from mistakes
 
-## Daily entry template
+## Daily entry format
 
-Create entries under `entries/YYYY/YYYY-MM-DD.md`, using this structure:
+Start from [`templates/Daily.md`](templates/Daily.md). A daily file may contain one or
+more lessons, but every lesson must independently include:
 
-```markdown
-# YYYY-MM-DD
+- permanent identifier and descriptive title;
+- areas and tags;
+- what I learned;
+- what I did;
+- evidence or example;
+- why it matters;
+- open questions;
+- next step; and
+- sources.
 
-## Area
-
-<!-- Select one or more learning-area labels from Master.md. -->
-
-## What I learned
-
-<!-- Explain the central lesson plainly and in your own words. -->
-
-## What I did
-
-<!-- Record the experiment, implementation, reading, discussion, or investigation. -->
-
-## Evidence or example
-
-<!-- Add a safe command, result, example, source, or link when useful. -->
-
-## Why it matters
-
-<!-- State how this changes your understanding or future decisions. -->
-
-## Open questions
-
-<!-- Record uncertainty honestly. Write "None" only when there is genuinely none. -->
-
-## Next step
-
-<!-- Name one small, concrete follow-up, or explain why no follow-up is needed. -->
-
-## Sources
-
-<!-- Credit relevant people, documentation, articles, papers, or repositories. -->
-```
+If an entry is written after the date it describes, place a retrospective notice directly
+below the date heading and retain the real Git commit timestamp.
 
 ## Commit convention
 
