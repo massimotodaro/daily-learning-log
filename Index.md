@@ -5,6 +5,8 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Recent entries
 
+- [2026-09-01](entries/2026/2026-09-01.md) — CI monitoring, release provenance, and
+  root-versus-cascade failure classification
 - [2026-08-28](entries/2026/2026-08-28.md) — AI inference, human-facing safety language,
   and safeguarding delivery
 
@@ -12,11 +14,14 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 | ID | Date | Lesson | Areas | Tags |
 | --- | --- | --- | --- | --- |
+| `DL-2026-09-01-01` | 2026-09-01 | [Monitoring failures need root-and-cascade separation](entries/2026/2026-09-01.md#dl-2026-09-01-01) | Cloud and delivery; Tools and workflow | `ci`, `monitoring`, `release-provenance`, `failure-classification` |
 | `DL-2026-08-28-01` | 2026-08-28 | [Stable machine states need clear human-facing language](entries/2026/2026-08-28.md#dl-2026-08-28-01) | AI and agent systems; Product and design | `state-models`, `terminology`, `human-oversight` |
 | `DL-2026-08-28-02` | 2026-08-28 | [Blocking unsafe output is not proof of human delivery](entries/2026/2026-08-28.md#dl-2026-08-28-02) | Security and privacy; Education and domain knowledge | `safeguarding`, `audit`, `human-handoff` |
 
 ## Areas
 
+- **Cloud and delivery:** `DL-2026-09-01-01`
+- **Tools and workflow:** `DL-2026-09-01-01`
 - **AI and agent systems:** `DL-2026-08-28-01`
 - **Security and privacy:** `DL-2026-08-28-02`
 - **Product and design:** `DL-2026-08-28-01`
@@ -24,6 +29,10 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Open questions
 
+- `DL-2026-09-01-01` — Which monitoring surfaces should expose a primary-cause field
+  separately from cleanup diagnostics?
+- `DL-2026-09-01-01` — When should a genuine stale deployment alert automatically route
+  to a deployment owner?
 - `DL-2026-08-28-02` — How should safeguarding delivery be monitored without exposing
   sensitive content outside its authorised boundary?
 - `DL-2026-08-28-02` — Which service-level target should apply between classification
