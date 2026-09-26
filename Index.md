@@ -5,6 +5,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Recent entries
 
+- [2026-09-26](entries/2026/2026-09-26.md) — The prompt goes last · Take a migration number at merge · A support case closed for no reply is not a refusal
 - [2026-09-25](entries/2026/2026-09-25.md) — Record the reason code, not just the status · A cloud email sandbox checks the recipient too; simulation is not a real send · Processed or rejected, never 'accepted with a note'
 - [2026-09-24](entries/2026/2026-09-24.md) — Freeze the environment during an end-to-end proof run
 - [2026-09-23](entries/2026/2026-09-23.md) — Change a UI stack by registration and attrition, not a rewrite
@@ -32,6 +33,9 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 | ID | Date | Lesson | Areas | Tags |
 | --- | --- | --- | --- | --- |
+| `DL-2026-09-26-03` | 2026-09-26 | [A support case closed for no reply is not a refusal](entries/2026/2026-09-26.md#dl-2026-09-26-03) | Business and leadership; Cloud and delivery | `vendor-management`, `verification`, `communication` |
+| `DL-2026-09-26-02` | 2026-09-26 | [Take a migration number at merge, and let shared environments receive only what is merged](entries/2026/2026-09-26.md#dl-2026-09-26-02) | Software engineering; Cloud and delivery | `database-migrations`, `ci`, `coordination` |
+| `DL-2026-09-26-01` | 2026-09-26 | [The prompt goes last: never put an instruction after the text someone will paste](entries/2026/2026-09-26.md#dl-2026-09-26-01) | AI and agent systems; Tools and workflow | `handover`, `sequencing`, `communication` |
 | `DL-2026-09-25-03` | 2026-09-25 | [Processed or rejected, never 'accepted with a note'](entries/2026/2026-09-25.md#dl-2026-09-25-03) | Product and design; Education and domain knowledge | `content-pipeline`, `accessibility`, `readability` |
 | `DL-2026-09-25-02` | 2026-09-25 | [A cloud email sandbox checks the recipient too; simulation is not a real send](entries/2026/2026-09-25.md#dl-2026-09-25-02) | Cloud and delivery; Security and privacy | `email`, `least-privilege`, `verification` |
 | `DL-2026-09-25-01` | 2026-09-25 | [Record the reason code, not just the status](entries/2026/2026-09-25.md#dl-2026-09-25-01) | Cloud and delivery; Software engineering | `debugging`, `observability`, `error-handling` |
@@ -61,17 +65,20 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Areas
 
-- **Cloud and delivery:** `DL-2026-09-25-02`, `DL-2026-09-25-01`, `DL-2026-09-24-01`, `DL-2026-09-04-01`, `DL-2026-09-01-01`
-- **Tools and workflow:** `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
-- **AI and agent systems:** `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-10-01`, `DL-2026-08-28-01`
+- **Cloud and delivery:** `DL-2026-09-26-03`, `DL-2026-09-26-02`, `DL-2026-09-25-02`, `DL-2026-09-25-01`, `DL-2026-09-24-01`, `DL-2026-09-04-01`, `DL-2026-09-01-01`
+- **Tools and workflow:** `DL-2026-09-26-01`, `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
+- **AI and agent systems:** `DL-2026-09-26-01`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-10-01`, `DL-2026-08-28-01`
 - **Security and privacy:** `DL-2026-09-25-02`, `DL-2026-09-21-01`, `DL-2026-09-14-01`, `DL-2026-09-09-01`, `DL-2026-09-05-01`, `DL-2026-08-28-02`
 - **Product and design:** `DL-2026-09-25-03`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-18-01`, `DL-2026-09-16-02`, `DL-2026-09-13-01`, `DL-2026-09-08-01`, `DL-2026-09-07-01`, `DL-2026-08-28-01`
 - **Education and domain knowledge:** `DL-2026-09-25-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-16-02`, `DL-2026-09-09-01`, `DL-2026-09-07-01`, `DL-2026-09-03-01`, `DL-2026-08-28-02`
-- **Software engineering:** `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
-- **Business and leadership:** `DL-2026-09-21-01`, `DL-2026-09-17-01`, `DL-2026-09-16-01`, `DL-2026-09-14-01`, `DL-2026-09-10-01`, `DL-2026-09-08-01`, `DL-2026-09-04-01`
+- **Software engineering:** `DL-2026-09-26-02`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
+- **Business and leadership:** `DL-2026-09-26-03`, `DL-2026-09-21-01`, `DL-2026-09-17-01`, `DL-2026-09-16-01`, `DL-2026-09-14-01`, `DL-2026-09-10-01`, `DL-2026-09-08-01`, `DL-2026-09-04-01`
 
 ## Open questions
 
+- `DL-2026-09-26-03` — How should provider support cases be tracked so an unanswered question is noticed within days?
+- `DL-2026-09-26-02` — Would a check that compares all open branches' migration numbers be worth its cost, or is the merge-time rule enough?
+- `DL-2026-09-26-01` — Could a message check flag any text that follows a paste block?
 - `DL-2026-09-25-03` — How reliable are reading-level scores on short, subject-heavy text?
 - `DL-2026-09-25-02` — How should delivery to real customer domains be proven before launch without using customer data?
 - `DL-2026-09-25-01` — Which other harnesses throw away response detail on failure?
