@@ -19,6 +19,15 @@ useful to my future self, even when the day's lesson is small.
 9. Credit collaborators and original sources when their work informed the entry.
 10. A day with a failed experiment still counts when the failure and lesson are recorded
     accurately.
+11. A retrospective covering several days may be committed together, provided every daily
+    file carries its retrospective notice and the commit message says it is a retrospective.
+12. This repository is public: write lessons from private, client or employer work as
+    transferable principles, with no product, client, employer, system, account or domain
+    names and no internal identifiers or paths.
+13. Review open questions once a month and mark each one answered (link the lesson that
+    answers it), dropped (with a reason) or still open.
+14. Quality over streak: record a lesson on days that produced one and skip days that did
+    not. Rule 1 describes what an entry contains, not an obligation to write every day.
 
 ## Repository structure
 
