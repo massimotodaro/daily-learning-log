@@ -5,6 +5,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Recent entries
 
+- [2026-09-28](entries/2026/2026-09-28.md) — Read the regulator's own text, not a summary
 - [2026-09-26](entries/2026/2026-09-26.md) — The prompt goes last · Take a migration number at merge · A support case closed for no reply is not a refusal
 - [2026-09-25](entries/2026/2026-09-25.md) — Record the reason code, not just the status · A cloud email sandbox checks the recipient too; simulation is not a real send · Processed or rejected, never 'accepted with a note'
 - [2026-09-24](entries/2026/2026-09-24.md) — Freeze the environment during an end-to-end proof run
@@ -33,6 +34,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 | ID | Date | Lesson | Areas | Tags |
 | --- | --- | --- | --- | --- |
+| `DL-2026-09-28-01` | 2026-09-28 | [Read the regulator's own text, not a summary](entries/2026/2026-09-28.md#dl-2026-09-28-01) | Business and leadership; Education and domain knowledge | `regulation`, `primary-sources`, `verification` |
 | `DL-2026-09-26-03` | 2026-09-26 | [A support case closed for no reply is not a refusal](entries/2026/2026-09-26.md#dl-2026-09-26-03) | Business and leadership; Cloud and delivery | `vendor-management`, `verification`, `communication` |
 | `DL-2026-09-26-02` | 2026-09-26 | [Take a migration number at merge, and let shared environments receive only what is merged](entries/2026/2026-09-26.md#dl-2026-09-26-02) | Software engineering; Cloud and delivery | `database-migrations`, `ci`, `coordination` |
 | `DL-2026-09-26-01` | 2026-09-26 | [The prompt goes last: never put an instruction after the text someone will paste](entries/2026/2026-09-26.md#dl-2026-09-26-01) | AI and agent systems; Tools and workflow | `handover`, `sequencing`, `communication` |
@@ -70,12 +72,13 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 - **AI and agent systems:** `DL-2026-09-26-01`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-10-01`, `DL-2026-08-28-01`
 - **Security and privacy:** `DL-2026-09-25-02`, `DL-2026-09-21-01`, `DL-2026-09-14-01`, `DL-2026-09-09-01`, `DL-2026-09-05-01`, `DL-2026-08-28-02`
 - **Product and design:** `DL-2026-09-25-03`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-18-01`, `DL-2026-09-16-02`, `DL-2026-09-13-01`, `DL-2026-09-08-01`, `DL-2026-09-07-01`, `DL-2026-08-28-01`
-- **Education and domain knowledge:** `DL-2026-09-25-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-16-02`, `DL-2026-09-09-01`, `DL-2026-09-07-01`, `DL-2026-09-03-01`, `DL-2026-08-28-02`
+- **Education and domain knowledge:** `DL-2026-09-28-01`, `DL-2026-09-25-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-16-02`, `DL-2026-09-09-01`, `DL-2026-09-07-01`, `DL-2026-09-03-01`, `DL-2026-08-28-02`
 - **Software engineering:** `DL-2026-09-26-02`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
-- **Business and leadership:** `DL-2026-09-26-03`, `DL-2026-09-21-01`, `DL-2026-09-17-01`, `DL-2026-09-16-01`, `DL-2026-09-14-01`, `DL-2026-09-10-01`, `DL-2026-09-08-01`, `DL-2026-09-04-01`
+- **Business and leadership:** `DL-2026-09-28-01`, `DL-2026-09-26-03`, `DL-2026-09-21-01`, `DL-2026-09-17-01`, `DL-2026-09-16-01`, `DL-2026-09-14-01`, `DL-2026-09-10-01`, `DL-2026-09-08-01`, `DL-2026-09-04-01`
 
 ## Open questions
 
+- `DL-2026-09-28-01` — How can a team flag, at review time, any compliance claim that cites a secondary source instead of the primary text?
 - `DL-2026-09-26-03` — How should provider support cases be tracked so an unanswered question is noticed within days?
 - `DL-2026-09-26-02` — Would a check that compares all open branches' migration numbers be worth its cost, or is the merge-time rule enough?
 - `DL-2026-09-26-01` — Could a message check flag any text that follows a paste block?
