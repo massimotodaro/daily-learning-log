@@ -5,6 +5,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Recent entries
 
+- [2026-09-29](entries/2026/2026-09-29.md) — Normalise JSON at the repository boundary
 - [2026-09-25](entries/2026/2026-09-25.md) — Record the reason code, not just the status · A cloud email sandbox checks the recipient too; simulation is not a real send · Processed or rejected, never 'accepted with a note'
 - [2026-09-24](entries/2026/2026-09-24.md) — Freeze the environment during an end-to-end proof run
 - [2026-09-23](entries/2026/2026-09-23.md) — Change a UI stack by registration and attrition, not a rewrite
@@ -32,6 +33,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 | ID | Date | Lesson | Areas | Tags |
 | --- | --- | --- | --- | --- |
+| `DL-2026-09-29-01` | 2026-09-29 | [Normalise JSON at the repository boundary](entries/2026/2026-09-29.md#dl-2026-09-29-01) | Software engineering | `databases`, `json`, `robustness` |
 | `DL-2026-09-25-03` | 2026-09-25 | [Processed or rejected, never 'accepted with a note'](entries/2026/2026-09-25.md#dl-2026-09-25-03) | Product and design; Education and domain knowledge | `content-pipeline`, `accessibility`, `readability` |
 | `DL-2026-09-25-02` | 2026-09-25 | [A cloud email sandbox checks the recipient too; simulation is not a real send](entries/2026/2026-09-25.md#dl-2026-09-25-02) | Cloud and delivery; Security and privacy | `email`, `least-privilege`, `verification` |
 | `DL-2026-09-25-01` | 2026-09-25 | [Record the reason code, not just the status](entries/2026/2026-09-25.md#dl-2026-09-25-01) | Cloud and delivery; Software engineering | `debugging`, `observability`, `error-handling` |
@@ -67,11 +69,12 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 - **Security and privacy:** `DL-2026-09-25-02`, `DL-2026-09-21-01`, `DL-2026-09-14-01`, `DL-2026-09-09-01`, `DL-2026-09-05-01`, `DL-2026-08-28-02`
 - **Product and design:** `DL-2026-09-25-03`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-18-01`, `DL-2026-09-16-02`, `DL-2026-09-13-01`, `DL-2026-09-08-01`, `DL-2026-09-07-01`, `DL-2026-08-28-01`
 - **Education and domain knowledge:** `DL-2026-09-25-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-16-02`, `DL-2026-09-09-01`, `DL-2026-09-07-01`, `DL-2026-09-03-01`, `DL-2026-08-28-02`
-- **Software engineering:** `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
+- **Software engineering:** `DL-2026-09-29-01`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
 - **Business and leadership:** `DL-2026-09-21-01`, `DL-2026-09-17-01`, `DL-2026-09-16-01`, `DL-2026-09-14-01`, `DL-2026-09-10-01`, `DL-2026-09-08-01`, `DL-2026-09-04-01`
 
 ## Open questions
 
+- `DL-2026-09-29-01` — Should the connection configuration itself be pinned so both paths are never possible?
 - `DL-2026-09-25-03` — How reliable are reading-level scores on short, subject-heavy text?
 - `DL-2026-09-25-02` — How should delivery to real customer domains be proven before launch without using customer data?
 - `DL-2026-09-25-01` — Which other harnesses throw away response detail on failure?
