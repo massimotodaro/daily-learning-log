@@ -5,6 +5,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Recent entries
 
+- [2026-10-02](entries/2026/2026-10-02.md) — Porting a guard to a second agent harness: be at least as lenient as the harness, and judge the change from the base
 - [2026-10-01](entries/2026/2026-10-01.md) — Before retiring old tables, rehearse the drop in a rolled-back transaction · Aim the browser test at the server that is actually running · Narrow a safety word-pattern from a closed list on the harmful side
 - [2026-09-25](entries/2026/2026-09-25.md) — Record the reason code, not just the status · A cloud email sandbox checks the recipient too; simulation is not a real send · Processed or rejected, never 'accepted with a note'
 - [2026-09-24](entries/2026/2026-09-24.md) — Freeze the environment during an end-to-end proof run
@@ -33,6 +34,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 | ID | Date | Lesson | Areas | Tags |
 | --- | --- | --- | --- | --- |
+| `DL-2026-10-02-01` | 2026-10-02 | [Porting a guard to a second agent harness: be at least as lenient as the harness, and judge the change from the base](entries/2026/2026-10-02.md#dl-2026-10-02-01) | AI and agent systems; Security and privacy; Tools and workflow | `agent-harness`, `hooks`, `guardrails`, `ci`, `parsing` |
 | `DL-2026-10-01-03` | 2026-10-01 | [Narrow a safety word-pattern from a closed list on the harmful side](entries/2026/2026-10-01.md#dl-2026-10-01-03) | AI and agent systems; Software engineering | `safety`, `regex`, `evaluation`, `false-positives` |
 | `DL-2026-10-01-02` | 2026-10-01 | [Aim the browser test at the server that is actually running](entries/2026/2026-10-01.md#dl-2026-10-01-02) | Software engineering; Tools and workflow | `testing`, `e2e`, `dev-environment`, `planning` |
 | `DL-2026-10-01-01` | 2026-10-01 | [Before retiring old tables, rehearse the drop in a rolled-back transaction](entries/2026/2026-10-01.md#dl-2026-10-01-01) | Software engineering; Tools and workflow | `migration`, `testing`, `databases`, `technical-debt` |
@@ -66,9 +68,9 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 ## Areas
 
 - **Cloud and delivery:** `DL-2026-09-25-02`, `DL-2026-09-25-01`, `DL-2026-09-24-01`, `DL-2026-09-04-01`, `DL-2026-09-01-01`
-- **Tools and workflow:** `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
-- **AI and agent systems:** `DL-2026-10-01-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-10-01`, `DL-2026-08-28-01`
-- **Security and privacy:** `DL-2026-09-25-02`, `DL-2026-09-21-01`, `DL-2026-09-14-01`, `DL-2026-09-09-01`, `DL-2026-09-05-01`, `DL-2026-08-28-02`
+- **Tools and workflow:** `DL-2026-10-02-01`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
+- **AI and agent systems:** `DL-2026-10-02-01`, `DL-2026-10-01-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-10-01`, `DL-2026-08-28-01`
+- **Security and privacy:** `DL-2026-10-02-01`, `DL-2026-09-25-02`, `DL-2026-09-21-01`, `DL-2026-09-14-01`, `DL-2026-09-09-01`, `DL-2026-09-05-01`, `DL-2026-08-28-02`
 - **Product and design:** `DL-2026-09-25-03`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-18-01`, `DL-2026-09-16-02`, `DL-2026-09-13-01`, `DL-2026-09-08-01`, `DL-2026-09-07-01`, `DL-2026-08-28-01`
 - **Education and domain knowledge:** `DL-2026-09-25-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-16-02`, `DL-2026-09-09-01`, `DL-2026-09-07-01`, `DL-2026-09-03-01`, `DL-2026-08-28-02`
 - **Software engineering:** `DL-2026-10-01-03`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
@@ -76,6 +78,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Open questions
 
+- `DL-2026-10-02-01` — Does a base-branch-defined pull-request check attach to the head commit the way branch protection expects?
 - `DL-2026-10-01-03` — How should the recall left to the model check be measured, so that the trade-off is known rather than assumed?
 - `DL-2026-10-01-01` — Should every planned removal ship with this rehearsal as a standing test, run until the drop itself lands?
 - `DL-2026-09-25-03` — How reliable are reading-level scores on short, subject-heavy text?
