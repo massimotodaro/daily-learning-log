@@ -5,6 +5,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Recent entries
 
+- [2026-10-08](entries/2026/2026-10-08.md) — A response model that forbids extra fields breaks the moment the database adds one
 - [2026-10-06](entries/2026/2026-10-06.md) — Build the thing before proving it: a test programme must never outrun the product
 - [2026-10-02](entries/2026/2026-10-02.md) — Porting a guard to a second agent harness: be at least as lenient as the harness, and judge the change from the base
 - [2026-10-01](entries/2026/2026-10-01.md) — Before retiring old tables, rehearse the drop in a rolled-back transaction · Aim the browser test at the server that is actually running · Narrow a safety word-pattern from a closed list on the harmful side
@@ -35,6 +36,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 | ID | Date | Lesson | Areas | Tags |
 | --- | --- | --- | --- | --- |
+| `DL-2026-10-08-01` | 2026-10-08 | [A response model that forbids extra fields breaks the moment the database adds one](entries/2026/2026-10-08.md#dl-2026-10-08-01) | Software engineering; Tools and workflow | `api-contracts`, `pydantic`, `postgres`, `reserved-words`, `schema-drift`, `testing` |
 | `DL-2026-10-06-01` | 2026-10-06 | [Build the thing before proving it: a test programme must never outrun the product](entries/2026/2026-10-06.md#dl-2026-10-06-01) | Software engineering; AI and agent systems; Tools and workflow | `testing`, `browser-tests`, `priorities`, `agent-lanes`, `ci`, `sunk-cost` |
 | `DL-2026-10-02-01` | 2026-10-02 | [Porting a guard to a second agent harness: be at least as lenient as the harness, and judge the change from the base](entries/2026/2026-10-02.md#dl-2026-10-02-01) | AI and agent systems; Security and privacy; Tools and workflow | `agent-harness`, `hooks`, `guardrails`, `ci`, `parsing` |
 | `DL-2026-10-01-03` | 2026-10-01 | [Narrow a safety word-pattern from a closed list on the harmful side](entries/2026/2026-10-01.md#dl-2026-10-01-03) | AI and agent systems; Software engineering | `safety`, `regex`, `evaluation`, `false-positives` |
@@ -80,6 +82,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Open questions
 
+- `DL-2026-10-08-01` — Which other real-schema test files are listed in CI shards but never actually run green?
 - `DL-2026-10-06-01` — When the product stabilises, which small set of end-to-end tests is worth reinstating first?
 - `DL-2026-10-02-01` — Does a base-branch-defined pull-request check attach to the head commit the way branch protection expects?
 - `DL-2026-10-01-03` — How should the recall left to the model check be measured, so that the trade-off is known rather than assumed?
