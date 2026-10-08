@@ -5,7 +5,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Recent entries
 
-- [2026-10-08](entries/2026/2026-10-08.md) — A response model that forbids extra fields breaks the moment the database adds one · Deployment automation that has never run against the real environment is untested, however green its tests
+- [2026-10-08](entries/2026/2026-10-08.md) — A response model that forbids extra fields breaks the moment the database adds one · Deployment automation that has never run against the real environment is untested, however green its tests · A white screen on reload can be the browser running out of request resources, not the app
 - [2026-10-06](entries/2026/2026-10-06.md) — Build the thing before proving it: a test programme must never outrun the product
 - [2026-10-02](entries/2026/2026-10-02.md) — Porting a guard to a second agent harness: be at least as lenient as the harness, and judge the change from the base
 - [2026-10-01](entries/2026/2026-10-01.md) — Before retiring old tables, rehearse the drop in a rolled-back transaction · Aim the browser test at the server that is actually running · Narrow a safety word-pattern from a closed list on the harmful side
@@ -36,6 +36,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 | ID | Date | Lesson | Areas | Tags |
 | --- | --- | --- | --- | --- |
+| `DL-2026-10-08-03` | 2026-10-08 | [A white screen on reload can be the browser running out of request resources, not the app](entries/2026/2026-10-08.md#dl-2026-10-08-03) | Tools and workflow; Software engineering | `vite`, `chromium`, `dev-server`, `http-cache`, `debugging`, `white-screen` |
 | `DL-2026-10-08-02` | 2026-10-08 | [Deployment automation that has never run against the real environment is untested, however green its tests](entries/2026/2026-10-08.md#dl-2026-10-08-02) | Tools and workflow; Software engineering | `deployment`, `ci`, `staging`, `postgres`, `gcp`, `oidc` |
 | `DL-2026-10-08-01` | 2026-10-08 | [A response model that forbids extra fields breaks the moment the database adds one](entries/2026/2026-10-08.md#dl-2026-10-08-01) | Software engineering; Tools and workflow | `api-contracts`, `pydantic`, `postgres`, `reserved-words`, `schema-drift`, `testing` |
 | `DL-2026-10-06-01` | 2026-10-06 | [Build the thing before proving it: a test programme must never outrun the product](entries/2026/2026-10-06.md#dl-2026-10-06-01) | Software engineering; AI and agent systems; Tools and workflow | `testing`, `browser-tests`, `priorities`, `agent-lanes`, `ci`, `sunk-cost` |
