@@ -5,6 +5,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Recent entries
 
+- [2026-10-11](entries/2026/2026-10-11.md) — Rehearse an upgrade of a long-lived database on a copy, and snapshot it first
 - [2026-10-08](entries/2026/2026-10-08.md) — A response model that forbids extra fields breaks the moment the database adds one · Deployment automation that has never run against the real environment is untested, however green its tests · A white screen on reload can be the browser running out of request resources, not the app
 - [2026-10-06](entries/2026/2026-10-06.md) — Build the thing before proving it: a test programme must never outrun the product
 - [2026-10-02](entries/2026/2026-10-02.md) — Porting a guard to a second agent harness: be at least as lenient as the harness, and judge the change from the base
@@ -36,6 +37,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 | ID | Date | Lesson | Areas | Tags |
 | --- | --- | --- | --- | --- |
+| `DL-2026-10-11-01` | 2026-10-11 | [Rehearse an upgrade of a long-lived database on a copy, and snapshot it first](entries/2026/2026-10-11.md#dl-2026-10-11-01) | Software engineering; Tools and workflow | `migration`, `databases`, `ci`, `testing`, `operations` |
 | `DL-2026-10-08-03` | 2026-10-08 | [A white screen on reload can be the browser running out of request resources, not the app](entries/2026/2026-10-08.md#dl-2026-10-08-03) | Tools and workflow; Software engineering | `vite`, `chromium`, `dev-server`, `http-cache`, `debugging`, `white-screen` |
 | `DL-2026-10-08-02` | 2026-10-08 | [Deployment automation that has never run against the real environment is untested, however green its tests](entries/2026/2026-10-08.md#dl-2026-10-08-02) | Tools and workflow; Software engineering | `deployment`, `ci`, `staging`, `postgres`, `gcp`, `oidc` |
 | `DL-2026-10-08-01` | 2026-10-08 | [A response model that forbids extra fields breaks the moment the database adds one](entries/2026/2026-10-08.md#dl-2026-10-08-01) | Software engineering; Tools and workflow | `api-contracts`, `pydantic`, `postgres`, `reserved-words`, `schema-drift`, `testing` |
@@ -74,16 +76,17 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 ## Areas
 
 - **Cloud and delivery:** `DL-2026-09-25-02`, `DL-2026-09-25-01`, `DL-2026-09-24-01`, `DL-2026-09-04-01`, `DL-2026-09-01-01`
-- **Tools and workflow:** `DL-2026-10-02-01`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
+- **Tools and workflow:** `DL-2026-10-11-01`, `DL-2026-10-02-01`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
 - **AI and agent systems:** `DL-2026-10-02-01`, `DL-2026-10-01-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-10-01`, `DL-2026-08-28-01`
 - **Security and privacy:** `DL-2026-10-02-01`, `DL-2026-09-25-02`, `DL-2026-09-21-01`, `DL-2026-09-14-01`, `DL-2026-09-09-01`, `DL-2026-09-05-01`, `DL-2026-08-28-02`
 - **Product and design:** `DL-2026-09-25-03`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-18-01`, `DL-2026-09-16-02`, `DL-2026-09-13-01`, `DL-2026-09-08-01`, `DL-2026-09-07-01`, `DL-2026-08-28-01`
 - **Education and domain knowledge:** `DL-2026-09-25-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-16-02`, `DL-2026-09-09-01`, `DL-2026-09-07-01`, `DL-2026-09-03-01`, `DL-2026-08-28-02`
-- **Software engineering:** `DL-2026-10-01-03`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
+- **Software engineering:** `DL-2026-10-11-01`, `DL-2026-10-01-03`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
 - **Business and leadership:** `DL-2026-09-21-01`, `DL-2026-09-17-01`, `DL-2026-09-16-01`, `DL-2026-09-14-01`, `DL-2026-09-10-01`, `DL-2026-09-08-01`, `DL-2026-09-04-01`
 
 ## Open questions
 
+- `DL-2026-10-11-01` — How much aged, realistic test data is "enough" for an upgrade-rehearsal check to be trustworthy, short of a full production-scale copy?
 - `DL-2026-10-08-02` — Can a dry-run against the real staging project be made a required step for deployment-automation changes?
 - `DL-2026-10-08-01` — Which other real-schema test files are listed in CI shards but never actually run green?
 - `DL-2026-10-06-01` — When the product stabilises, which small set of end-to-end tests is worth reinstating first?
