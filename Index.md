@@ -5,7 +5,16 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Recent entries
 
+- [2026-10-29](entries/2026/2026-10-29.md) — When you redact an error, keep its closed reason code · "Ready" is a claim about one moment: re-check liveness right before you hand a system to a checker
+- [2026-10-14](entries/2026/2026-10-14.md) — An exception pinned to a line number breaks on the next unrelated edit; and a change that skips its checkers ships the break
+- [2026-10-11](entries/2026/2026-10-11.md) — Rehearse an upgrade of a long-lived database on a copy, and snapshot it first
+- [2026-10-08](entries/2026/2026-10-08.md) — A response model that forbids extra fields breaks the moment the database adds one · Deployment automation that has never run against the real environment is untested, however green its tests · A white screen on reload can be the browser running out of request resources, not the app
+- [2026-10-06](entries/2026/2026-10-06.md) — Build the thing before proving it: a test programme must never outrun the product
+- [2026-10-02](entries/2026/2026-10-02.md) — Porting a guard to a second agent harness: be at least as lenient as the harness, and judge the change from the base
+- [2026-10-01](entries/2026/2026-10-01.md) — Before retiring old tables, rehearse the drop in a rolled-back transaction · Aim the browser test at the server that is actually running · Narrow a safety word-pattern from a closed list on the harmful side
 - [2026-09-29](entries/2026/2026-09-29.md) — Normalise JSON at the repository boundary
+- [2026-09-28](entries/2026/2026-09-28.md) — Read the regulator's own text, not a summary
+- [2026-09-26](entries/2026/2026-09-26.md) — The prompt goes last · Take a migration number at merge · A support case closed for no reply is not a refusal
 - [2026-09-25](entries/2026/2026-09-25.md) — Record the reason code, not just the status · A cloud email sandbox checks the recipient too; simulation is not a real send · Processed or rejected, never 'accepted with a note'
 - [2026-09-24](entries/2026/2026-09-24.md) — Freeze the environment during an end-to-end proof run
 - [2026-09-23](entries/2026/2026-09-23.md) — Change a UI stack by registration and attrition, not a rewrite
@@ -33,7 +42,23 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 | ID | Date | Lesson | Areas | Tags |
 | --- | --- | --- | --- | --- |
+| `DL-2026-10-29-01` | 2026-10-29 | [When you redact an error, keep its closed reason code; the prefix alone hides the cause](entries/2026/2026-10-29.md#dl-2026-10-29-01) | Software engineering; Tools and workflow | `error-handling`, `observability`, `redaction`, `debugging`, `local-stack` |
+| `DL-2026-10-29-02` | 2026-10-29 | ["Ready" is a claim about one moment: re-check liveness right before you hand a system to a checker](entries/2026/2026-10-29.md#dl-2026-10-29-02) | Tools and workflow; AI and agent systems | `readiness`, `agents`, `verification`, `local-stack`, `testing` |
+| `DL-2026-10-14-01` | 2026-10-14 | [An exception pinned to a line number breaks on the next unrelated edit; and a change that skips its checkers ships the break](entries/2026/2026-10-14.md#dl-2026-10-14-01) | Software engineering; Tools and workflow | `static-analysis`, `allowlist`, `ci`, `code-review`, `agents` |
+| `DL-2026-10-11-01` | 2026-10-11 | [Rehearse an upgrade of a long-lived database on a copy, and snapshot it first](entries/2026/2026-10-11.md#dl-2026-10-11-01) | Software engineering; Tools and workflow | `migration`, `databases`, `ci`, `testing`, `operations` |
+| `DL-2026-10-08-03` | 2026-10-08 | [A white screen on reload can be the browser running out of request resources, not the app](entries/2026/2026-10-08.md#dl-2026-10-08-03) | Tools and workflow; Software engineering | `vite`, `chromium`, `dev-server`, `http-cache`, `debugging`, `white-screen` |
+| `DL-2026-10-08-02` | 2026-10-08 | [Deployment automation that has never run against the real environment is untested, however green its tests](entries/2026/2026-10-08.md#dl-2026-10-08-02) | Tools and workflow; Software engineering | `deployment`, `ci`, `staging`, `postgres`, `gcp`, `oidc` |
+| `DL-2026-10-08-01` | 2026-10-08 | [A response model that forbids extra fields breaks the moment the database adds one](entries/2026/2026-10-08.md#dl-2026-10-08-01) | Software engineering; Tools and workflow | `api-contracts`, `pydantic`, `postgres`, `reserved-words`, `schema-drift`, `testing` |
+| `DL-2026-10-06-01` | 2026-10-06 | [Build the thing before proving it: a test programme must never outrun the product](entries/2026/2026-10-06.md#dl-2026-10-06-01) | Software engineering; AI and agent systems; Tools and workflow | `testing`, `browser-tests`, `priorities`, `agent-lanes`, `ci`, `sunk-cost` |
+| `DL-2026-10-02-01` | 2026-10-02 | [Porting a guard to a second agent harness: be at least as lenient as the harness, and judge the change from the base](entries/2026/2026-10-02.md#dl-2026-10-02-01) | AI and agent systems; Security and privacy; Tools and workflow | `agent-harness`, `hooks`, `guardrails`, `ci`, `parsing` |
+| `DL-2026-10-01-03` | 2026-10-01 | [Narrow a safety word-pattern from a closed list on the harmful side](entries/2026/2026-10-01.md#dl-2026-10-01-03) | AI and agent systems; Software engineering | `safety`, `regex`, `evaluation`, `false-positives` |
+| `DL-2026-10-01-02` | 2026-10-01 | [Aim the browser test at the server that is actually running](entries/2026/2026-10-01.md#dl-2026-10-01-02) | Software engineering; Tools and workflow | `testing`, `e2e`, `dev-environment`, `planning` |
+| `DL-2026-10-01-01` | 2026-10-01 | [Before retiring old tables, rehearse the drop in a rolled-back transaction](entries/2026/2026-10-01.md#dl-2026-10-01-01) | Software engineering; Tools and workflow | `migration`, `testing`, `databases`, `technical-debt` |
 | `DL-2026-09-29-01` | 2026-09-29 | [Normalise JSON at the repository boundary](entries/2026/2026-09-29.md#dl-2026-09-29-01) | Software engineering | `databases`, `json`, `robustness` |
+| `DL-2026-09-28-01` | 2026-09-28 | [Read the regulator's own text, not a summary](entries/2026/2026-09-28.md#dl-2026-09-28-01) | Business and leadership; Education and domain knowledge | `regulation`, `primary-sources`, `verification` |
+| `DL-2026-09-26-03` | 2026-09-26 | [A support case closed for no reply is not a refusal](entries/2026/2026-09-26.md#dl-2026-09-26-03) | Business and leadership; Cloud and delivery | `vendor-management`, `verification`, `communication` |
+| `DL-2026-09-26-02` | 2026-09-26 | [Take a migration number at merge, and let shared environments receive only what is merged](entries/2026/2026-09-26.md#dl-2026-09-26-02) | Software engineering; Cloud and delivery | `database-migrations`, `ci`, `coordination` |
+| `DL-2026-09-26-01` | 2026-09-26 | [The prompt goes last: never put an instruction after the text someone will paste](entries/2026/2026-09-26.md#dl-2026-09-26-01) | AI and agent systems; Tools and workflow | `handover`, `sequencing`, `communication` |
 | `DL-2026-09-25-03` | 2026-09-25 | [Processed or rejected, never 'accepted with a note'](entries/2026/2026-09-25.md#dl-2026-09-25-03) | Product and design; Education and domain knowledge | `content-pipeline`, `accessibility`, `readability` |
 | `DL-2026-09-25-02` | 2026-09-25 | [A cloud email sandbox checks the recipient too; simulation is not a real send](entries/2026/2026-09-25.md#dl-2026-09-25-02) | Cloud and delivery; Security and privacy | `email`, `least-privilege`, `verification` |
 | `DL-2026-09-25-01` | 2026-09-25 | [Record the reason code, not just the status](entries/2026/2026-09-25.md#dl-2026-09-25-01) | Cloud and delivery; Software engineering | `debugging`, `observability`, `error-handling` |
@@ -63,18 +88,32 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Areas
 
-- **Cloud and delivery:** `DL-2026-09-25-02`, `DL-2026-09-25-01`, `DL-2026-09-24-01`, `DL-2026-09-04-01`, `DL-2026-09-01-01`
-- **Tools and workflow:** `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
-- **AI and agent systems:** `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-10-01`, `DL-2026-08-28-01`
-- **Security and privacy:** `DL-2026-09-25-02`, `DL-2026-09-21-01`, `DL-2026-09-14-01`, `DL-2026-09-09-01`, `DL-2026-09-05-01`, `DL-2026-08-28-02`
+- **Cloud and delivery:** `DL-2026-09-26-03`, `DL-2026-09-26-02`, `DL-2026-09-25-02`, `DL-2026-09-25-01`, `DL-2026-09-24-01`, `DL-2026-09-04-01`, `DL-2026-09-01-01`
+- **Tools and workflow:** `DL-2026-10-29-02`, `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-02-01`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-26-01`, `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
+- **AI and agent systems:** `DL-2026-10-29-02`, `DL-2026-10-02-01`, `DL-2026-10-01-03`, `DL-2026-09-26-01`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-10-01`, `DL-2026-08-28-01`
+- **Security and privacy:** `DL-2026-10-02-01`, `DL-2026-09-25-02`, `DL-2026-09-21-01`, `DL-2026-09-14-01`, `DL-2026-09-09-01`, `DL-2026-09-05-01`, `DL-2026-08-28-02`
 - **Product and design:** `DL-2026-09-25-03`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-18-01`, `DL-2026-09-16-02`, `DL-2026-09-13-01`, `DL-2026-09-08-01`, `DL-2026-09-07-01`, `DL-2026-08-28-01`
-- **Education and domain knowledge:** `DL-2026-09-25-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-16-02`, `DL-2026-09-09-01`, `DL-2026-09-07-01`, `DL-2026-09-03-01`, `DL-2026-08-28-02`
-- **Software engineering:** `DL-2026-09-29-01`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
-- **Business and leadership:** `DL-2026-09-21-01`, `DL-2026-09-17-01`, `DL-2026-09-16-01`, `DL-2026-09-14-01`, `DL-2026-09-10-01`, `DL-2026-09-08-01`, `DL-2026-09-04-01`
+- **Education and domain knowledge:** `DL-2026-09-28-01`, `DL-2026-09-25-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-16-02`, `DL-2026-09-09-01`, `DL-2026-09-07-01`, `DL-2026-09-03-01`, `DL-2026-08-28-02`
+- **Software engineering:** `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-01-03`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-29-01`, `DL-2026-09-26-02`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
+- **Business and leadership:** `DL-2026-09-28-01`, `DL-2026-09-26-03`, `DL-2026-09-21-01`, `DL-2026-09-17-01`, `DL-2026-09-16-01`, `DL-2026-09-14-01`, `DL-2026-09-10-01`, `DL-2026-09-08-01`, `DL-2026-09-04-01`
 
 ## Open questions
 
+- `DL-2026-10-29-02` — Should the ready line be printed only after background seeding has finished, so it means ready to use and not just started?
+- `DL-2026-10-29-01` — Should every layer that reduces an error be tested on a nested failure, to prove the innermost closed code reaches the log?
+- `DL-2026-10-14-01` — Can exceptions be keyed by symbol or by a content fingerprint alone, so that moving code never invalidates them, without letting a changed value slip through under the old approval?
+- `DL-2026-10-11-01` — How much aged, realistic test data is "enough" for an upgrade-rehearsal check to be trustworthy, short of a full production-scale copy?
+- `DL-2026-10-08-02` — Can a dry-run against the real staging project be made a required step for deployment-automation changes?
+- `DL-2026-10-08-01` — Which other real-schema test files are listed in CI shards but never actually run green?
+- `DL-2026-10-06-01` — When the product stabilises, which small set of end-to-end tests is worth reinstating first?
+- `DL-2026-10-02-01` — Does a base-branch-defined pull-request check attach to the head commit the way branch protection expects?
+- `DL-2026-10-01-03` — How should the recall left to the model check be measured, so that the trade-off is known rather than assumed?
+- `DL-2026-10-01-01` — Should every planned removal ship with this rehearsal as a standing test, run until the drop itself lands?
 - `DL-2026-09-29-01` — Should the connection configuration itself be pinned so both paths are never possible?
+- `DL-2026-09-28-01` — How can a team flag, at review time, any compliance claim that cites a secondary source instead of the primary text?
+- `DL-2026-09-26-03` — How should provider support cases be tracked so an unanswered question is noticed within days?
+- `DL-2026-09-26-02` — Would a check that compares all open branches' migration numbers be worth its cost, or is the merge-time rule enough?
+- `DL-2026-09-26-01` — Could a message check flag any text that follows a paste block?
 - `DL-2026-09-25-03` — How reliable are reading-level scores on short, subject-heavy text?
 - `DL-2026-09-25-02` — How should delivery to real customer domains be proven before launch without using customer data?
 - `DL-2026-09-25-01` — Which other harnesses throw away response detail on failure?
