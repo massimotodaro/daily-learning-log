@@ -12,6 +12,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 - [2026-10-06](entries/2026/2026-10-06.md) — Build the thing before proving it: a test programme must never outrun the product
 - [2026-10-02](entries/2026/2026-10-02.md) — Porting a guard to a second agent harness: be at least as lenient as the harness, and judge the change from the base
 - [2026-10-01](entries/2026/2026-10-01.md) — Before retiring old tables, rehearse the drop in a rolled-back transaction · Aim the browser test at the server that is actually running · Narrow a safety word-pattern from a closed list on the harmful side
+- [2026-09-29](entries/2026/2026-09-29.md) — Normalise JSON at the repository boundary
 - [2026-09-28](entries/2026/2026-09-28.md) — Read the regulator's own text, not a summary
 - [2026-09-26](entries/2026/2026-09-26.md) — The prompt goes last · Take a migration number at merge · A support case closed for no reply is not a refusal
 - [2026-09-25](entries/2026/2026-09-25.md) — Record the reason code, not just the status · A cloud email sandbox checks the recipient too; simulation is not a real send · Processed or rejected, never 'accepted with a note'
@@ -53,6 +54,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 | `DL-2026-10-01-03` | 2026-10-01 | [Narrow a safety word-pattern from a closed list on the harmful side](entries/2026/2026-10-01.md#dl-2026-10-01-03) | AI and agent systems; Software engineering | `safety`, `regex`, `evaluation`, `false-positives` |
 | `DL-2026-10-01-02` | 2026-10-01 | [Aim the browser test at the server that is actually running](entries/2026/2026-10-01.md#dl-2026-10-01-02) | Software engineering; Tools and workflow | `testing`, `e2e`, `dev-environment`, `planning` |
 | `DL-2026-10-01-01` | 2026-10-01 | [Before retiring old tables, rehearse the drop in a rolled-back transaction](entries/2026/2026-10-01.md#dl-2026-10-01-01) | Software engineering; Tools and workflow | `migration`, `testing`, `databases`, `technical-debt` |
+| `DL-2026-09-29-01` | 2026-09-29 | [Normalise JSON at the repository boundary](entries/2026/2026-09-29.md#dl-2026-09-29-01) | Software engineering | `databases`, `json`, `robustness` |
 | `DL-2026-09-28-01` | 2026-09-28 | [Read the regulator's own text, not a summary](entries/2026/2026-09-28.md#dl-2026-09-28-01) | Business and leadership; Education and domain knowledge | `regulation`, `primary-sources`, `verification` |
 | `DL-2026-09-26-03` | 2026-09-26 | [A support case closed for no reply is not a refusal](entries/2026/2026-09-26.md#dl-2026-09-26-03) | Business and leadership; Cloud and delivery | `vendor-management`, `verification`, `communication` |
 | `DL-2026-09-26-02` | 2026-09-26 | [Take a migration number at merge, and let shared environments receive only what is merged](entries/2026/2026-09-26.md#dl-2026-09-26-02) | Software engineering; Cloud and delivery | `database-migrations`, `ci`, `coordination` |
@@ -92,7 +94,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 - **Security and privacy:** `DL-2026-10-02-01`, `DL-2026-09-25-02`, `DL-2026-09-21-01`, `DL-2026-09-14-01`, `DL-2026-09-09-01`, `DL-2026-09-05-01`, `DL-2026-08-28-02`
 - **Product and design:** `DL-2026-09-25-03`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-18-01`, `DL-2026-09-16-02`, `DL-2026-09-13-01`, `DL-2026-09-08-01`, `DL-2026-09-07-01`, `DL-2026-08-28-01`
 - **Education and domain knowledge:** `DL-2026-09-28-01`, `DL-2026-09-25-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-16-02`, `DL-2026-09-09-01`, `DL-2026-09-07-01`, `DL-2026-09-03-01`, `DL-2026-08-28-02`
-- **Software engineering:** `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-01-03`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-26-02`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
+- **Software engineering:** `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-01-03`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-29-01`, `DL-2026-09-26-02`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
 - **Business and leadership:** `DL-2026-09-28-01`, `DL-2026-09-26-03`, `DL-2026-09-21-01`, `DL-2026-09-17-01`, `DL-2026-09-16-01`, `DL-2026-09-14-01`, `DL-2026-09-10-01`, `DL-2026-09-08-01`, `DL-2026-09-04-01`
 
 ## Open questions
@@ -107,6 +109,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 - `DL-2026-10-02-01` — Does a base-branch-defined pull-request check attach to the head commit the way branch protection expects?
 - `DL-2026-10-01-03` — How should the recall left to the model check be measured, so that the trade-off is known rather than assumed?
 - `DL-2026-10-01-01` — Should every planned removal ship with this rehearsal as a standing test, run until the drop itself lands?
+- `DL-2026-09-29-01` — Should the connection configuration itself be pinned so both paths are never possible?
 - `DL-2026-09-28-01` — How can a team flag, at review time, any compliance claim that cites a secondary source instead of the primary text?
 - `DL-2026-09-26-03` — How should provider support cases be tracked so an unanswered question is noticed within days?
 - `DL-2026-09-26-02` — Would a check that compares all open branches' migration numbers be worth its cost, or is the merge-time rule enough?
