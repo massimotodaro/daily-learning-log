@@ -5,6 +5,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Recent entries
 
+- [2026-10-30](entries/2026/2026-10-30.md) — Search the bug ledger for the failure code before diagnosing
 - [2026-10-29](entries/2026/2026-10-29.md) — When you redact an error, keep its closed reason code · "Ready" is a claim about one moment: re-check liveness right before you hand a system to a checker
 - [2026-10-14](entries/2026/2026-10-14.md) — An exception pinned to a line number breaks on the next unrelated edit; and a change that skips its checkers ships the break
 - [2026-10-11](entries/2026/2026-10-11.md) — Rehearse an upgrade of a long-lived database on a copy, and snapshot it first
@@ -42,6 +43,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 | ID | Date | Lesson | Areas | Tags |
 | --- | --- | --- | --- | --- |
+| `DL-2026-10-30-01` | 2026-10-30 | [Search the bug ledger for the failure code before diagnosing; the same refusal had five earlier records and one fix](entries/2026/2026-10-30.md#dl-2026-10-30-01) | Tools and workflow; Software engineering | `bug-ledger`, `debugging`, `permissions`, `agents`, `process` |
 | `DL-2026-10-29-01` | 2026-10-29 | [When you redact an error, keep its closed reason code; the prefix alone hides the cause](entries/2026/2026-10-29.md#dl-2026-10-29-01) | Software engineering; Tools and workflow | `error-handling`, `observability`, `redaction`, `debugging`, `local-stack` |
 | `DL-2026-10-29-02` | 2026-10-29 | ["Ready" is a claim about one moment: re-check liveness right before you hand a system to a checker](entries/2026/2026-10-29.md#dl-2026-10-29-02) | Tools and workflow; AI and agent systems | `readiness`, `agents`, `verification`, `local-stack`, `testing` |
 | `DL-2026-10-14-01` | 2026-10-14 | [An exception pinned to a line number breaks on the next unrelated edit; and a change that skips its checkers ships the break](entries/2026/2026-10-14.md#dl-2026-10-14-01) | Software engineering; Tools and workflow | `static-analysis`, `allowlist`, `ci`, `code-review`, `agents` |
@@ -89,16 +91,17 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 ## Areas
 
 - **Cloud and delivery:** `DL-2026-09-26-03`, `DL-2026-09-26-02`, `DL-2026-09-25-02`, `DL-2026-09-25-01`, `DL-2026-09-24-01`, `DL-2026-09-04-01`, `DL-2026-09-01-01`
-- **Tools and workflow:** `DL-2026-10-29-02`, `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-02-01`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-26-01`, `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
+- **Tools and workflow:** `DL-2026-10-30-01`, `DL-2026-10-29-02`, `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-02-01`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-26-01`, `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
 - **AI and agent systems:** `DL-2026-10-29-02`, `DL-2026-10-02-01`, `DL-2026-10-01-03`, `DL-2026-09-26-01`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-10-01`, `DL-2026-08-28-01`
 - **Security and privacy:** `DL-2026-10-02-01`, `DL-2026-09-25-02`, `DL-2026-09-21-01`, `DL-2026-09-14-01`, `DL-2026-09-09-01`, `DL-2026-09-05-01`, `DL-2026-08-28-02`
 - **Product and design:** `DL-2026-09-25-03`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-18-01`, `DL-2026-09-16-02`, `DL-2026-09-13-01`, `DL-2026-09-08-01`, `DL-2026-09-07-01`, `DL-2026-08-28-01`
 - **Education and domain knowledge:** `DL-2026-09-28-01`, `DL-2026-09-25-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-16-02`, `DL-2026-09-09-01`, `DL-2026-09-07-01`, `DL-2026-09-03-01`, `DL-2026-08-28-02`
-- **Software engineering:** `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-01-03`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-29-01`, `DL-2026-09-26-02`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
+- **Software engineering:** `DL-2026-10-30-01`, `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-01-03`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-29-01`, `DL-2026-09-26-02`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
 - **Business and leadership:** `DL-2026-09-28-01`, `DL-2026-09-26-03`, `DL-2026-09-21-01`, `DL-2026-09-17-01`, `DL-2026-09-16-01`, `DL-2026-09-14-01`, `DL-2026-09-10-01`, `DL-2026-09-08-01`, `DL-2026-09-04-01`
 
 ## Open questions
 
+- `DL-2026-10-30-01` — Should a failing run automatically search the ledger for its closed reason code and print the matching records?
 - `DL-2026-10-29-02` — Should the ready line be printed only after background seeding has finished, so it means ready to use and not just started?
 - `DL-2026-10-29-01` — Should every layer that reduces an error be tested on a nested failure, to prove the innermost closed code reaches the log?
 - `DL-2026-10-14-01` — Can exceptions be keyed by symbol or by a content fingerprint alone, so that moving code never invalidates them, without letting a changed value slip through under the old approval?
