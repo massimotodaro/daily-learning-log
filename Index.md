@@ -5,6 +5,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 ## Recent entries
 
+- [2026-11-23](entries/2026/2026-11-23.md) — When a new rule lands on the main line while a long branch is open, scan the branch's own code for it
 - [2026-11-11](entries/2026/2026-11-11.md) — A green test gate covers only the files it lists · Target the service where the code runs in production · Isolate ambient cloud config in tests · Never loop over credential profiles or amend a pushed commit
 - [2026-11-05](entries/2026/2026-11-05.md) — A reviewer's PASS without the required gate commands is not a pass · Prove a hand-back where it will be reviewed · A seed must handle data that already exists, and ask when that data may be deliberate · Never use git stash in a repository with several worktrees · A hand-back states only values that were observed
 - [2026-10-30](entries/2026/2026-10-30.md) — Search the bug ledger for the failure code before diagnosing
@@ -45,6 +46,7 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 
 | ID | Date | Lesson | Areas | Tags |
 | --- | --- | --- | --- | --- |
+| `DL-2026-11-23-01` | 2026-11-23 | [When a new rule lands on the main line while a long branch is open, scan the branch's own code for it](entries/2026/2026-11-23.md#dl-2026-11-23-01) | Software engineering; Tools and workflow | `integration`, `long-lived-branches`, `database`, `registries`, `test-gates` |
 | `DL-2026-11-11-01` | 2026-11-11 | [A green test gate covers only the files it lists; everything outside it rots silently](entries/2026/2026-11-11.md#dl-2026-11-11-01) | Software engineering; Tools and workflow | `testing`, `ci`, `test-gates`, `maintenance` |
 | `DL-2026-11-11-02` | 2026-11-11 | [Target the service where the code runs in production, not the one its name suggests](entries/2026/2026-11-11.md#dl-2026-11-11-02) | Cloud and delivery; Software engineering | `deployment`, `specs`, `production`, `identity` |
 | `DL-2026-11-11-03` | 2026-11-11 | [A developer's cloud CLI sign-in can break unrelated tests; isolate ambient cloud config](entries/2026/2026-11-11.md#dl-2026-11-11-03) | Software engineering; Security and privacy | `testing`, `test-isolation`, `credentials`, `cloud-cli` |
@@ -102,16 +104,17 @@ areas, identifier format, and entry requirements are defined in [Master.md](Mast
 ## Areas
 
 - **Cloud and delivery:** `DL-2026-11-11-02`, `DL-2026-11-05-02`, `DL-2026-09-26-03`, `DL-2026-09-26-02`, `DL-2026-09-25-02`, `DL-2026-09-25-01`, `DL-2026-09-24-01`, `DL-2026-09-04-01`, `DL-2026-09-01-01`
-- **Tools and workflow:** `DL-2026-11-11-04`, `DL-2026-11-11-01`, `DL-2026-11-05-05`, `DL-2026-11-05-04`, `DL-2026-11-05-02`, `DL-2026-11-05-01`, `DL-2026-10-30-01`, `DL-2026-10-29-02`, `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-02-01`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-26-01`, `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
+- **Tools and workflow:** `DL-2026-11-23-01`, `DL-2026-11-11-04`, `DL-2026-11-11-01`, `DL-2026-11-05-05`, `DL-2026-11-05-04`, `DL-2026-11-05-02`, `DL-2026-11-05-01`, `DL-2026-10-30-01`, `DL-2026-10-29-02`, `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-02-01`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-26-01`, `DL-2026-09-24-01`, `DL-2026-09-18-01`, `DL-2026-09-16-01`, `DL-2026-09-05-02`, `DL-2026-09-01-01`
 - **AI and agent systems:** `DL-2026-11-05-05`, `DL-2026-11-05-01`, `DL-2026-10-29-02`, `DL-2026-10-02-01`, `DL-2026-10-01-03`, `DL-2026-09-26-01`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-10-01`, `DL-2026-08-28-01`
 - **Security and privacy:** `DL-2026-11-11-04`, `DL-2026-11-11-03`, `DL-2026-10-02-01`, `DL-2026-09-25-02`, `DL-2026-09-21-01`, `DL-2026-09-14-01`, `DL-2026-09-09-01`, `DL-2026-09-05-01`, `DL-2026-08-28-02`
 - **Product and design:** `DL-2026-09-25-03`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-18-01`, `DL-2026-09-16-02`, `DL-2026-09-13-01`, `DL-2026-09-08-01`, `DL-2026-09-07-01`, `DL-2026-08-28-01`
 - **Education and domain knowledge:** `DL-2026-09-28-01`, `DL-2026-09-25-03`, `DL-2026-09-20-01`, `DL-2026-09-17-02`, `DL-2026-09-16-02`, `DL-2026-09-09-01`, `DL-2026-09-07-01`, `DL-2026-09-03-01`, `DL-2026-08-28-02`
-- **Software engineering:** `DL-2026-11-11-03`, `DL-2026-11-11-02`, `DL-2026-11-11-01`, `DL-2026-11-05-03`, `DL-2026-10-30-01`, `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-01-03`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-29-01`, `DL-2026-09-26-02`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
+- **Software engineering:** `DL-2026-11-23-01`, `DL-2026-11-11-03`, `DL-2026-11-11-02`, `DL-2026-11-11-01`, `DL-2026-11-05-03`, `DL-2026-10-30-01`, `DL-2026-10-29-01`, `DL-2026-10-14-01`, `DL-2026-10-11-01`, `DL-2026-10-01-03`, `DL-2026-10-01-02`, `DL-2026-10-01-01`, `DL-2026-09-29-01`, `DL-2026-09-26-02`, `DL-2026-09-25-01`, `DL-2026-09-23-01`, `DL-2026-09-19-01`, `DL-2026-09-17-01`, `DL-2026-09-13-01`, `DL-2026-09-05-02`, `DL-2026-09-05-01`, `DL-2026-09-03-01`
 - **Business and leadership:** `DL-2026-11-05-03`, `DL-2026-09-28-01`, `DL-2026-09-26-03`, `DL-2026-09-21-01`, `DL-2026-09-17-01`, `DL-2026-09-16-01`, `DL-2026-09-14-01`, `DL-2026-09-10-01`, `DL-2026-09-08-01`, `DL-2026-09-04-01`
 
 ## Open questions
 
+- `DL-2026-11-23-01` — Should the changed-file test selection always include repository-wide scanning tests, whatever files changed?
 - `DL-2026-10-30-01` — Should a failing run automatically search the ledger for its closed reason code and print the matching records?
 - `DL-2026-10-29-02` — Should the ready line be printed only after background seeding has finished, so it means ready to use and not just started?
 - `DL-2026-10-29-01` — Should every layer that reduces an error be tested on a nested failure, to prove the innermost closed code reaches the log?
